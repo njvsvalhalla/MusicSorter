@@ -1,8 +1,7 @@
 {
   "profiles": {
     "SorterApp": {
-      "commandName": "Project",
-      "commandLineArgs": "\"I:\\Music\\More\" \"I:\\Music\\SortedMusic\""
+      "commandName": "Project"
     }
   }
 }
