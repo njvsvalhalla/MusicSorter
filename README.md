@@ -6,7 +6,9 @@
 Eventually this will be customizable to sort music in a given folder but right now I have it set to output something like
 
 > /Orchid/[FLAC] 2005 - Totality
+
 > /City of Caterpillar/[MP3-VBR] 2002 - City of Caterpillar
+
 > /Pageninetynine/[MP3-320] 2000 - Document 5
 
 etc
