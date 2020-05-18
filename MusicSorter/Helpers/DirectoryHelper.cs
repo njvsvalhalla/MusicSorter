@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 using Serilog;
+using Serilog.Core;
 
 namespace MusicSorterCore.Helpers
 {
@@ -32,9 +33,16 @@ namespace MusicSorterCore.Helpers
             var fileList = new List<string>();
 
             //TODO add this in the actual config file as a CDL
-            fileList.AddRange(Directory.EnumerateFiles(path, "*.mp3"));
-            fileList.AddRange(Directory.EnumerateFiles(path, "*.flac"));
-            fileList.AddRange(Directory.EnumerateFiles(path, "*.mp4"));
+            try
+            {
+                fileList.AddRange(Directory.EnumerateFiles(path, "*.mp3"));
+                fileList.AddRange(Directory.EnumerateFiles(path, "*.flac"));
+                fileList.AddRange(Directory.EnumerateFiles(path, "*.mp4"));
+            }
+            catch (Exception ex)
+            {
+                Log.Information($"Cannot get file list for {path}");
+            }
 
             return fileList;
         }

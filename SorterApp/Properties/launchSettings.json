@@ -2,7 +2,7 @@
   "profiles": {
     "SorterApp": {
       "commandName": "Project",
-      "commandLineArgs": "\"C:\\Users\\Neal\\Documents\\Soulseek Downloads\\complete\" \"C:\\Users\\Neal\\Desktop\\Music\\Sorted\""
+      "commandLineArgs": "\"I:\\Music\\More\" \"I:\\Music\\SortedMusic\""
     }
   }
 }

@@ -15,7 +15,7 @@ namespace SorterApp
         {
             Log.Logger = new LoggerConfiguration()
                 .WriteTo.Console()
-                .WriteTo.File("log-.txt", rollingInterval: RollingInterval.Minute)
+                .WriteTo.File("log-.txt", rollingInterval: RollingInterval.Day)
                 .CreateLogger();
 
             _sorter = new MusicSorter();
@@ -29,7 +29,7 @@ namespace SorterApp
         public static void Sort(
             [Required] string path,
             [Required] string outputPath,
-            [Optional("%ARTIST%\\%YEAR% - %ALBUM%\\%FILE%")] string format,
+            [Optional("%ARTIST%\\[%EXT|BR%] %YEAR% - %ALBUM%\\%FILE%")] string format,
             [Optional(false)] bool actuallyMove)
         {
             Log.Information($"Input path: {path}, output path: {outputPath}");
